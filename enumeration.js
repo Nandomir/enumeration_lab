@@ -47,6 +47,14 @@ Enumeration.prototype = {
       }
     }
     return returnValue
+  },
+
+  reduce: function(array,callback){
+    var a = array.slice(0,3)
+    var b = array.slice(3,6)
+    console.log(a)
+    console.log(b)
+    a.reduce(add, 0)
   }
 
 }
