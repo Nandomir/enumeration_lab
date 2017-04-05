@@ -19,19 +19,19 @@ describe('My Enumeration Library', function() {
     }), { name: "Ringo", instrument: "drums" } )
   });
 
-  xit("can map an array (to doubles of the items)", function() {
+  it("can map an array (to doubles of the items)", function() {
     assert.deepEqual( myEnumLib.map( testArrayOfNumbers, function( number ) {
       return number * 2;
     }), [ 2, 4, 6, 8, 10, 12 ])
   });
 
-  xit("can filter an array (to only even numbers)", function() {
+  it("can filter an array (to only even numbers)", function() {
     assert.deepEqual( myEnumLib.filter( testArrayOfNumbers, function( number ) {
       return number % 2 === 0;
     }), [ 2, 4, 6 ])
   });
 
-  xit("returns true if *some* elements meet a condition", function() {
+  it("returns true if *some* elements meet a condition", function() {
     assert.equal( myEnumLib.some( testArrayOfNumbers, function( number ) {
       return number > 3;
     }), true );
@@ -40,7 +40,7 @@ describe('My Enumeration Library', function() {
     }), false );
   });
 
-  xit("returns true if *every* element meets a condition", function() {
+  it("returns true if *every* element meets a condition", function() {
     assert.equal( myEnumLib.every( testArrayOfNumbers, function( number ) {
       return number > 0;
     }), true )
